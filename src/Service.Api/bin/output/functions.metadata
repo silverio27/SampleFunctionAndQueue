@@ -1,0 +1,27 @@
+[
+  {
+    "name": "CreateItem",
+    "scriptFile": "Service.Api.dll",
+    "entryPoint": "Service.Api.CreateItem.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "type": "HttpTrigger",
+        "direction": "In",
+        "authLevel": "Function",
+        "methods": [
+          "post"
+        ]
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  }
+]
